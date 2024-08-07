@@ -1,0 +1,43 @@
+var a = "global a";
+var b = "global b";
+var c = "global c";
+{
+    var a = "outer a";
+    var b = "outer b";
+    {
+        var a = "inner a";
+        print a;
+        print b;
+        print c;
+    }
+    print a;
+    print b;
+    print c;
+}
+print a;
+print b;
+print c;
+
+if ( 3 >= 0 ) print "hello if statement";
+
+if(false) print "Hello lier";
+else 
+print "Truth always comes out";
+
+if (false or true) print "false or true";
+if (false and true) print "false and true";
+
+var i = 3;
+while (i > 0) {
+    i = i - 1;
+    print i;
+}
+
+var a = 0;
+var temp;
+
+for (var b = 1; a < 100; b = temp + b) {
+    print a;
+    temp = a;
+    a = b;
+}
