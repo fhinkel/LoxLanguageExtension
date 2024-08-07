@@ -13,10 +13,10 @@
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			], 
 			"outFiles": [
-				"${workspaceFolder}/out/**/*.(m|c|)js",
-				"!**/node_modules/**"
+				"${workspaceFolder}/out/**/*.js"
 			], 
-			"preLaunchTask": "${defaultBuildTask}"
+			"preLaunchTask": "${defaultBuildTask}", 
+			"sourceMaps": true
 		}
 	]
 }

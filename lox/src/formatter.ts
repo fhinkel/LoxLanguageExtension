@@ -12,6 +12,7 @@ export class LoxDocumentFormatter implements vscode.DocumentFormattingEditProvid
             document.positionAt(document.getText().length)
         );
 
+        console.log('Formatting document');
         const formattedText = this.formatText(document.getText());
         edits.push(vscode.TextEdit.replace(fullRange, formattedText));
 
@@ -21,7 +22,6 @@ export class LoxDocumentFormatter implements vscode.DocumentFormattingEditProvid
     private formatText(text: string): string {
         // Implement your formatting logic here
         // For simplicity, we'll just trim trailing whitespace in this example
-        // return text.split('\n').map(line => line.trimEnd()).join('\n');
-        return "formatted text";
+        return text.split('\n').map(line => line.trimEnd()).join('\n');
     }
 }
