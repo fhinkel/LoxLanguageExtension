@@ -33,6 +33,13 @@ while (i > 0) {
     print i;
 }
 
+// comment 
+
+whil (i,d) {
+    print i;
+    print d;
+}
+
 var a = 0;
 var temp;
 
