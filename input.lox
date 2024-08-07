@@ -33,19 +33,6 @@ while (i > 0) {
     print i;
 }
 
-// comment 
-
-var i = 0;
-while (i < 3) {
-i = i + 1;
-   print i;
-}
-
-whil (i,d) {     
-    print i;
-    print d;
-}
-
 var a = 0;
 var temp;
 
