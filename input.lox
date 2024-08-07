@@ -8,9 +8,9 @@ var c = "global c";
         var a = "inner a";
         print a;
         print b;
-        print c;     
+        print c;
     }
-    print a;     
+    print a;
     print b;
     print c;
 }
