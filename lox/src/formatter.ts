@@ -20,8 +20,23 @@ export class LoxDocumentFormatter implements vscode.DocumentFormattingEditProvid
     }
 
     private formatText(text: string): string {
-        // Implement your formatting logic here
-        // For simplicity, we'll just trim trailing whitespace in this example
-        return text.split('\n').map(line => line.trimEnd()).join('\n');
+        let indentLevel = 0;
+        const indentSize = 4; // You can adjust the indent size as needed
+
+        return text.split('\n').map(line => {
+            let trimmedLine = line.trim();
+
+            if (trimmedLine.endsWith(')')) {
+                indentLevel--;
+            }
+
+            const indentedLine = ' '.repeat(indentLevel * indentSize) + trimmedLine;
+
+            if (trimmedLine.endsWith('(')) {
+                indentLevel++;
+            }
+
+            return indentedLine;
+        }).join('\n');
     }
 }
